@@ -10,7 +10,7 @@ import (
 
 func main() {
 	// Read JSON data from the file
-	data, err := os.ReadFile("version-test.json")
+	data, err := os.ReadFile("version.cue")
 	if err != nil {
 		fmt.Println("Error reading file:", err)
 		return
