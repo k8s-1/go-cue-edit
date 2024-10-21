@@ -36,7 +36,7 @@ func main() {
 		log.Fatal("Error during MarshalIndent(): ", err)
 	}
 
-	err = os.WriteFile("version-test.json", updatedJsonData, 0644)
+	err = os.WriteFile("version-test.json", append(updatedJsonData, '\n'), 0644)
 	if err != nil {
 		log.Fatal("Error writing updated file:", err)
 	}
