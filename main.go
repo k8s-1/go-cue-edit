@@ -4,10 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+  "log"
 )
-
-// Define a map to capture the app versions
-var appVersions map[string]string
 
 func main() {
 	// Open the JSON file
@@ -17,9 +15,12 @@ func main() {
 		return
 	}
 
+	var appVersions map[string]string
+
 	err = json.Unmarshal(jsonData, &appVersions)
 	if err != nil {
-		fmt.Println("error:", err)
+		log.Fatal("Error during Unmarshal(): ", err)
 	}
-	fmt.Printf("%+v", jsonData)
+
+	fmt.Printf("%+v\n", appVersions)
 }
