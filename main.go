@@ -40,18 +40,5 @@ func main() {
     path := cue.ParsePath("myfield")
     updatedInstance := instance.FillPath(path, "newValue")
 
-    if updatedInstance.Err() != nil {
-        fmt.Println("Error updating CUE instance:", updatedInstance.Err())
-        return
-    }
-
-    // Encode the updated instance back to CUE format
-    // Convert back to CUE file content (this preserves the structure with imports intact)
-    file, err := os.Create(cueFile)
-    if err != nil {
-        fmt.Println("Error creating file:", err)
-        return
-    }
-    defer file.Close()
-
+    fmt.Println(updatedInstance)
 } 
