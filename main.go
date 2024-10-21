@@ -1,14 +1,18 @@
 package main
 
 import (
-    "fmt"
-    "io"
-    // "os"
-
-    "cuelang.org/go/cue"
-    "cuelang.org/go/cue/load"
-    // "cuelang.org/go/format"
+  "encoding/json"
+  "os"
+  "log"
 )
+
+// The data struct for the decoded data
+// Notice that all fields must be exportable!
+type Data struct {
+    Origin string
+    User   string
+    Active bool
+}
 
 func main() {
 }
