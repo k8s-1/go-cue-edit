@@ -8,7 +8,6 @@ import (
 )
 
 func main() {
-	// Open the JSON file
 	jsonData, err := os.ReadFile("version.json")
 	if err != nil {
 		fmt.Println("Error opening file:", err)
