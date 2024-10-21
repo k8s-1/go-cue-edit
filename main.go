@@ -2,7 +2,7 @@ package main
 
 import (
     "fmt"
-    "os"
+    // "os"
     "cuelang.org/go/cue"
     "cuelang.org/go/cue/cuecontext"
     "cuelang.org/go/cue/load"
