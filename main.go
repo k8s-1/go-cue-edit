@@ -6,7 +6,7 @@ import (
     "cuelang.org/go/cue"
     "cuelang.org/go/cue/cuecontext"
     "cuelang.org/go/cue/load"
-    "cuelang.org/go/cue/build"
+    // "cuelang.org/go/cue/build"
 )
 
 func main() {
@@ -54,12 +54,4 @@ func main() {
     }
     defer file.Close()
 
-    // Write updated instance back to the CUE file
-    _, err = file.WriteString(updatedInstance.Syntax().String())
-    if err != nil {
-        fmt.Println("Error writing to CUE file:", err)
-        return
-    }
-
-    fmt.Println("CUE file updated successfully!")
 } 
